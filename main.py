@@ -4,6 +4,7 @@ import sieve_analysis as sa_sieve
 import soil_analysis as sa
 import soil_properties as sp
 import hydrometer_analysis as sa_hydrometer
+import atterberg_limits_analysis as sa_atterberg
 
 file = 'Sample Soil Data.xlsx'
 
@@ -93,3 +94,16 @@ hy_Cc = (hy_D30**2) / (hy_D10 * hy_D60)
 
 # soil properties
 hy_properties = sp.compute_properties(hy_sample_data)
+
+# read atterberg limits analysis data
+atterberg_tables = dr.read_tables(
+    file, 'Atterberg Limits Analysis',
+    ['Liquid Limit', 'Plastic Limit'],
+    has_header=[True, True]
+)
+
+# run analysis
+ll_data, pl_data, ll, pl, pi = sa_atterberg.process(
+    atterberg_tables['Liquid Limit'],
+    atterberg_tables['Plastic Limit']
+)

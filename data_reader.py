@@ -47,6 +47,8 @@ def read_tables(file, sheet_name, table_names, has_header=None):
 
         # drop fully empty rows and reset index to start from 0
         table = table.dropna(how='all').reset_index(drop=True)
+        # drop fully empty columns
+        table = table.dropna(how='all', axis=1).reset_index(drop=True)
 
         tables[name] = table
 

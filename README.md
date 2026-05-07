@@ -4,6 +4,9 @@ A Python-based geotechnical laboratory tool for processing and classifying soils
 **Unified Soil Classification System (USCS) · ASTM D2487**. Supports sieve analysis, hydrometer analysis, and 
 Atterberg limits testing, with both a command-line interface and an interactive Streamlit web app.
 
+
+![App Screenshot](Screenshots\Sieve Analysis Classification Tab.png)
+
 ---
 
 ## Features
@@ -30,7 +33,7 @@ Atterberg limits testing, with both a command-line interface and an interactive 
 Install all dependencies with:
 
 ```bash
-  pip install pandas numpy plotly streamlit openpyxl
+pip install pandas numpy plotly streamlit openpyxl
 ```
 
 ---
@@ -40,7 +43,7 @@ Install all dependencies with:
 ### Streamlit App
 
 ```bash
-  streamlit run app.py
+streamlit run app.py
 ```
 
 1. Upload your Excel data file in the sidebar.
@@ -53,7 +56,7 @@ Results are displayed across tabbed panels: Classification, Gradation Curve or C
 ### Command-Line Interface
 
 ```bash
-  python main.py
+python main.py
 ```
 
 Follow the prompts to enter the file path, select the test type, and provide sheet names. The USCS classification and soil properties are printed to the terminal.
@@ -129,5 +132,3 @@ The USCS classifier in `soil_classification.py` implements the full ASTM D2487 d
   - CL-ML dual symbol assigned for the PI 4–7 hatched zone
 
 All classification errors due to missing input data are returned as structured messages rather than raised exceptions, allowing the app to surface actionable guidance to the user.
-
----

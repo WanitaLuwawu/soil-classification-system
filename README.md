@@ -5,7 +5,7 @@ A Python-based geotechnical laboratory tool for processing and classifying soils
 Atterberg limits testing, with both a command-line interface and an interactive Streamlit web app.
 
 
-![App Screenshot](Screenshots\Sieve Analysis Classification Tab.png)
+![App Screenshot](Screenshots\SieveAnalysis.png)
 
 ---
 
